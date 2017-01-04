@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="refresh" content="180">
+<meta name="Content-Script-Type" content="text/javascript">
+<body>
+
+<h1 align="center">Friedland Industries Current Pricing</h1>
+<div align="center" style="font-weight:bold; font-size:18px;">
+<script type="text/javascript">
+document.write ('<p>Current date and time is <span id="date-time">', new Date().toLocaleString(), '<\/span>.<\/p>')
+if (document.getElementById) onload = function () {
+	setInterval ("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
+}
+</script>
+</div>
+<p id="date"></p>
+<div align="center">
+<iframe allowtransparency='true' src='http://50.192.13.166:81/material/materialprice/index/14' frameborder='0' style='width:100%; height:5000px; border:none;overflow-y:auto;overflow-x:none' scrolling="yes"></iframe>
+</div>
+</body>
+</html>
